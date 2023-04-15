@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "telegrams",
+  "info": {
+    "singularName": "telegram",
+    "pluralName": "telegrams",
+    "displayName": "telegram"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tel_1": {
+      "type": "integer"
+    },
+    "tel_2": {
+      "type": "integer"
+    }
+  }
+}

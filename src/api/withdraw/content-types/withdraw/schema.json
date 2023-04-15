@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "withdraws",
+  "info": {
+    "singularName": "withdraw",
+    "pluralName": "withdraws",
+    "displayName": "withdraw"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "withdraws"
+    },
+    "amount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "created_on": {
+      "type": "datetime"
+    }
+  }
+}

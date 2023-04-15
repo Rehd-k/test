@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "customer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "minLength": 6
+    },
+    "phone_number": {
+      "type": "integer"
+    },
+    "level": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "balance": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "allow_withdrawal": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "deposits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::deposit.deposit"
+    },
+    "withdraws": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::withdraw.withdraw",
+      "mappedBy": "customer"
+    },
+    "earnings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::earning.earning",
+      "mappedBy": "customer"
+    },
+    "logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::log.log",
+      "mappedBy": "customer"
+    },
+    "referar": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::referal.referal",
+      "mappedBy": "customer"
+    }
+  }
+}

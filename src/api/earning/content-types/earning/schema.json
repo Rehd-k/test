@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earnings",
+  "info": {
+    "singularName": "earning",
+    "pluralName": "earnings",
+    "displayName": "earning"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "daily_profits": {
+      "type": "integer",
+      "default": 0
+    },
+    "promotion_bonus": {
+      "type": "integer",
+      "default": 0
+    },
+    "accumulated_profit": {
+      "type": "integer",
+      "default": 0
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "earnings"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logs",
+  "info": {
+    "singularName": "log",
+    "pluralName": "logs",
+    "displayName": "log"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "logs"
+    },
+    "type": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "payout": {
+      "type": "integer"
+    }
+  }
+}

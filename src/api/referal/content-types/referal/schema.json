@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referals",
+  "info": {
+    "singularName": "referal",
+    "pluralName": "referals",
+    "displayName": "referal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "referar"
+    },
+    "funded": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
